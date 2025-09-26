@@ -1,0 +1,3 @@
+include:
+  - ./pg/compose.yaml
+  - ./valkey/compose.yaml
