@@ -11,13 +11,16 @@ async def stream_data(batch_size: int):
 
     from src.core.utils.logging import get_logger
     from src.infra.db import PostgresDB
-    from src.seed.generation_funcs import (generate_addresses,
-                                           generate_bookings, generate_hotels,
-                                           generate_locations,
-                                           generate_reviews,
-                                           generate_room_amenities,
-                                           generate_rooms,
-                                           generate_search_history)
+    from src.seed.generation_funcs import (
+        generate_addresses,
+        generate_bookings,
+        generate_hotels,
+        generate_locations,
+        generate_reviews,
+        generate_room_amenities,
+        generate_rooms,
+        generate_search_history,
+    )
 
     logger = get_logger(__name__)
     logger.info("Начинается seeding данных в основные таблицы")

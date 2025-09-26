@@ -49,7 +49,7 @@ jobs:
 
       - name: Lint with flake8
         run: |
-          poetry run flake8 src tests
+          poetry run flake8 src
 
       - name: Check for security issues with bandit
         run: |

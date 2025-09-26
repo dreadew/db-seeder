@@ -1,5 +1,7 @@
 # db-seeder
 
+[![CI](https://github.com/dreadew/sql-recsys/actions/workflows/ci.yml/badge.svg)](https://github.com/dreadew/sql-recsys/actions/workflows/ci.yml)
+
 Проект **db-seeder** предназначен для генерации и загрузки начальных данных в базу данных PostgreSQL. Данные загружаются в три этапа с помощью асинхронных скриптов на Python.
 
 ---

@@ -77,8 +77,30 @@ requires = ["poetry-core>=2.0.0,<3.0.0"]
 
 [dependency-groups]
 dev = [
-    "bandit (>=1.8.6,<2.0.0)",
-    "flake8 (>=7.3.0,<8.0.0)",
-    "black (>=25.9.0,<26.0.0)",
-    "isort (>=6.0.1,<7.0.0)"
+  "bandit (>=1.8.6,<2.0.0)",
+  "flake8 (>=7.3.0,<8.0.0)",
+  "black (>=25.9.0,<26.0.0)",
+  "isort (>=6.0.1,<7.0.0)",
 ]
+
+[tool.black]
+extend-exclude = '''
+/(
+  \.git
+  | \.mypy_cache
+  | \.tox
+  | \.venv
+  | __pycache__
+  | migrations
+)/
+'''
+include = '\.pyi?$'
+line-length = 88
+target-version = ['py311']
+
+[tool.isort]
+known_first_party = ["src"]
+known_third_party = ["sqlalchemy"]
+line_length = 88
+multi_line_output = 3
+profile = "black"

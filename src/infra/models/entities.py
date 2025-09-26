@@ -1,14 +1,28 @@
 from datetime import datetime
 
-from sqlalchemy import (DECIMAL, TIMESTAMP, CheckConstraint, Column, DateTime,
-                        ForeignKey, Integer, PrimaryKeyConstraint, String,
-                        Text, UniqueConstraint)
+from sqlalchemy import (
+    DECIMAL,
+    TIMESTAMP,
+    CheckConstraint,
+    Column,
+    DateTime,
+    ForeignKey,
+    Integer,
+    PrimaryKeyConstraint,
+    String,
+    Text,
+    UniqueConstraint,
+)
 from sqlalchemy.orm import relationship
 
-from src.infra.models.base import (Base, BaseEntity, NamedEntity,
-                                   NamedEntityWithDescription,
-                                   NamedEntityWithShortName,
-                                   SoftDeletableEntity)
+from src.infra.models.base import (
+    Base,
+    BaseEntity,
+    NamedEntity,
+    NamedEntityWithDescription,
+    NamedEntityWithShortName,
+    SoftDeletableEntity,
+)
 
 
 class Country(NamedEntity):

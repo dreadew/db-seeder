@@ -8,8 +8,7 @@ async def seed_static_data():
     Функция для генерации константных данных
     """
 
-    from src.core.constants import (BOOKING_STATUSES, LOCATION_TYPES,
-                                    ROOM_TYPES, USERS)
+    from src.core.constants import BOOKING_STATUSES, LOCATION_TYPES, ROOM_TYPES, USERS
     from src.core.utils.logging import get_logger
     from src.infra.db import PostgresDB
 

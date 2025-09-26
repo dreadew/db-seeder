@@ -12,8 +12,11 @@ async def seed_base_data():
     from src.core.constants import AMENITIES_LIST
     from src.core.utils.logging import get_logger
     from src.infra.db import PostgresDB
-    from src.seed.generation_funcs import (generate_amenities,
-                                           generate_countries, generate_users)
+    from src.seed.generation_funcs import (
+        generate_amenities,
+        generate_countries,
+        generate_users,
+    )
 
     logger = get_logger(__name__)
     logger.info("Начинается вставка начальных данных пользователей, стран и удобств")
